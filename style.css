@@ -1,0 +1,32 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.logo {
+    height: 80px;
+}
+main {
+    padding: 20px;
+}
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+a {
+    color: #004080;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
