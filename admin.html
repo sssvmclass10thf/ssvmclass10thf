@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login - SSSVM</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .login-form {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff3e0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .login-form button {
+      background: #ff9800;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<header><h1>🔐 Admin Login</h1></header>
+<main>
+  <div class="login-form">
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="msg" style="color:red;"></p>
+  </div>
+</main>
+<script>
+function login() {
+  const user = document.getElementById('username').value;
+  const pass = document.getElementById('password').value;
+  if (user === "admin" && pass === "1234") {
+    window.location.href = "dashboard.html";
+  } else {
+    document.getElementById('msg').textContent = "❌ Incorrect username or password!";
+  }
+}
+</script>
+<footer>© 2025 Admin | SSSVM Class 10-F</footer>
+</body>
+</html>
