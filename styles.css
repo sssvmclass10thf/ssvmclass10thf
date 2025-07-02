@@ -1,1 +1,83 @@
-/* Styling for glowing buttons and saffron theme */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #fff3e0, #ffe0b2);
+  color: #4e342e;
+}
+
+header {
+  background-color: #ff6f00;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+nav {
+  background: #e65100;
+  padding: 12px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffe082;
+}
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#contact {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+footer {
+  background: #bf360c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
