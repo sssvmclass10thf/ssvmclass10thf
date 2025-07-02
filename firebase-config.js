@@ -1,1 +1,0 @@
-// Firebase initialization config will go here
