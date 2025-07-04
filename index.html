@@ -6,99 +6,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>  <style>
-    .rgb-border {
+    .rgb-border-container {
       position: relative;
-      display: inline-block;
       padding: 20px;
-      border-radius: 12px;
+      background-color: #ff7300;
+      border-radius: 10px;
+      z-index: 1;
       overflow: hidden;
     }
 
-    .rgb-border::before {
-      content: '';
+    .rgb-border-container::before {
+      content: "";
       position: absolute;
-      top: -4px;
-      left: -4px;
-      right: -4px;
-      bottom: -4px;
-      background: conic-gradient(red, orange, yellow, green, cyan, blue, violet, red);
-      border-radius: 15px;
-      z-index: 1;
-      animation: spin 4s linear infinite;
-      filter: blur(4px);
-    }
-
-    .header-container {
-      position: relative;
-      background-color: orange;
-      padding: 20px;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(270deg, #ff0047, #2c34ff, #00ffe7, #00ff37, #ffec00, #ff0047);
+      background-size: 600% 600%;
       border-radius: 12px;
-      z-index: 2;
-      text-align: center;
-      color: white;
-      font-weight: bold;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      z-index: -1;
+      animation: rgb-rotate 15s linear infinite;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
     }
 
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Existing Button and Nav Styles */
-    .glow-button {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: 600;
-      color: white;
-      background-color: #007bff;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
-      transition: 0.3s ease-in-out;
-      margin-top: 10px;
-    }
-
-    .glow-button:hover {
-      box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
-      transform: scale(1.05);
-    }
-
-    .scroll-top {
-      display: inline-block;
-      background-color: #111;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      margin: 30px auto;
-      box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
-      transition: 0.3s ease-in-out;
-    }
-
-    .scroll-top:hover {
-      background-color: #00f0ff;
-      color: #111;
-      box-shadow: 0 0 15px #00f0ff, 0 0 25px #00f0ff, 0 0 35px #00f0ff;
+    @keyframes rgb-rotate {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     html {
       scroll-behavior: smooth;
     }
-  </style></head>
-<body id="top">
+  </style></head><body id="top">
   <header>
-    <div class="rgb-border">
-      <div class="header-container">
-        <img src="logo.png" alt="School Logo" class="logo">
+    <div class="rgb-border-container">
+      <img src="logo.png" alt="School Logo" class="logo">
+      <div class="school-info">
         <h1>🕉️ Saraswati Senior Secondary Vidya Mandir</h1>
         <h2>Class 10th - Section F</h2>
         <p><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>
@@ -108,12 +53,28 @@
   </header>  <nav>
     <ul>
       <li><a href="#" style="color: #E8C87F;"><i class="fas fa-home"></i> 🏠<u>HOME</u></a></li>
-      <li><a href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank" rel="noopener noreferrer" style="color: lightyellow;"><i class="fas fa-file-alt"></i> 👨‍🎓<u>STUDENTS LIST</u></a></li>
+      <li>
+        <a href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank" rel="noopener noreferrer" style="color: lightyellow;">
+          <i class="fas fa-file-alt"></i> 👨‍🎓<u>STUDENTS LIST</u>
+        </a>
+      </li>
       <li><a href="homework.html" style="color: lightgreen;"><i class="fas fa-book"></i> 📚<u>HOMEWORK</u></a></li>
-      <li><a href="Notices.html" style="color: pink;"><i class="fas fa-bullhorn"></i> 📢<u>NOTICE</u></a></li>
-      <li><a href="post.html" style="color: lightblue;"><i class="fas fa-pencil-alt"></i> ✍️<u>POSTS</u></a></li>
+      <li>
+        <a href="Notices.html" style="color: pink;">
+          <i class="fas fa-bullhorn"></i> 📢<u>NOTICE</u>
+        </a>
+      </li>
+      <li>
+        <a href="post.html" style="color: lightblue;">
+          <i class="fas fa-pencil-alt"></i> ✍️<u>POSTS</u>
+        </a>
+      </li>
       <li><a href="#contact" style="color: black;"><i class="fas fa-address-book"></i> ☎️<u>CONTACT US</u></a></li>
-      <li><a href="#FeePayment" style="color: #F5DE9C;">💸<u>FEE PAYMENT</u></a></li>
+      <li>
+        <a href="#FeePayment" style="color: #F5DE9C;">
+          💸<u>FEE PAYMENT</u>
+        </a>
+      </li>
     </ul>
   </nav>  <main>
     <section id="contact">
@@ -155,4 +116,5 @@
     <p>© 2025 SSSVM CLASS 10th F | 🙏 Made with Faith & Love</p>
   </footer>
 </body>
-        </html>
+  </html>
+
