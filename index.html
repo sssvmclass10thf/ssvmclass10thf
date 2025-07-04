@@ -1,170 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSSVM Class 10-F</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSSVM Class 10-F</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-<style>
-html {
-    scroll-behavior: smooth;
-}
+  <style>
+    /* ✅ Glowing Button CSS */
+    .glow-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+      transition: 0.3s ease-in-out;
+      margin-top: 10px;
+    }
 
-/* ✅ OUTER RGB BORDER WITH ROTATION IN ONE DIRECTION */
-.glow-border-container {
-    position: relative;
-    display: inline-block;
-    border-radius: 12px;
-    padding: 3px; 
-    background: conic-gradient(red, orange, yellow, green, cyan, blue, violet, red);
-    animation: rotateBorder 8s linear infinite;
-}
+    .glow-button:hover {
+      box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
+      transform: scale(1.05);
+    }
 
-@keyframes rotateBorder {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
+    /* ✅ Scroll-to-top glowing button */
+    .scroll-top {
+      display: inline-block;
+      background-color: #111;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 30px auto;
+      box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+      transition: 0.3s ease-in-out;
+    }
 
-.glow-border-container::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    padding: 3px;
-    background: inherit;
-    filter: blur(8px);
-    z-index: -1;
-}
+    .scroll-top:hover {
+      background-color: #00f0ff;
+      color: #111;
+      box-shadow: 0 0 15px #00f0ff, 0 0 25px #00f0ff, 0 0 35px #00f0ff;
+    }
 
-.header-box {
-    background-color: #ff6600;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.school-info h1 {
-    margin: 0;
-    font-size: 24px;
-}
+    /* ✅ Header Background with Vidya Bharti Logo */
+    .header-container {
+      background-color: #FFA64D ; /* Saffron color */
+      background-image: url('vidyabharti.png'); /* Replace with your logo file */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 150px; /* Adjust as needed */
+      padding: 20px;
+      text-align: center;
+      color: white;
+      border: 5px solid #00ffe7;
+      border-radius: 10px;
+    }
 
-.school-info h2 {
-    margin: 5px 0;
-    font-size: 20px;
-}
+    .school-info h1, 
+    .school-info h2,
+    .school-info p {
+      margin: 5px 0;
+    }
 
-.school-info p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-/* ✅ Tumhare glowing buttons untouched */
-.glow-button {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
-    transition: 0.3s ease-in-out;
-    margin-top: 10px;
-}
-
-.glow-button:hover {
-    box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
-    transform: scale(1.05);
-}
-
-.scroll-top {
-    display: inline-block;
-    background-color: #111;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 30px auto;
-    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
-    transition: 0.3s ease-in-out;
-}
-
-.scroll-top:hover {
-    background-color: #00f0ff;
-    color: #111;
-    box-shadow: 0 0 15px #00f0ff, 0 0 25px #00f0ff, 0 0 35px #00f0ff;
-}
-</style>
+  </style>
 </head>
 
-<body id="top">
-
-<header>
-    <div class="glow-border-container">
-        <div class="header-box">
-            <div class="school-info">
-                <h1>🕉️ Saraswati Senior Secondary Vidya Mandir</h1>
-                <h2>Class 10th - Section F</h2>
-                <p><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>
-                <p><strong>Developer:</strong> Priyanshu Singh</p>
-            </div>
-        </div>
+<body id="top"> <!-- ✅ Important: Add id="top" to enable scroll to top -->
+  <header>
+    <div class="header-container">
+      <img src="logo.png" alt="School Logo" class="logo" style="display: none;"> <!-- Hide if not needed -->
+      <div class="school-info">
+        <h1>🕉️ Saraswati Senior Secondary Vidya Mandir</h1>
+        <h2>Class 10th - Section F</h2>
+        <p><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>
+        <p><strong>Developer:</strong> Priyanshu Singh</p>
+      </div>
     </div>
-</header>
+  </header>
 
-<nav>
+  <nav>
     <ul>
-        <li><a href="#"><i class="fas fa-home"></i> 🏠<u>HOME</u></a></li>
-        <li><a href="#"><i class="fas fa-file-alt"></i> 👨‍🎓<u>STUDENTS LIST</u></a></li>
-        <li><a href="#"><i class="fas fa-book"></i> 📚<u>HOMEWORK</u></a></li>
-        <li><a href="#"><i class="fas fa-bullhorn"></i> 📢<u>NOTICE</u></a></li>
-        <li><a href="#"><i class="fas fa-pencil-alt"></i> ✍️<u>POSTS</u></a></li>
-        <li><a href="#"><i class="fas fa-address-book"></i> ☎️<u>CONTACT US</u></a></li>
-        <li><a href="#">💸<u>FEE PAYMENT</u></a></li>
+      <li><a href="#" style="color: #E8C87F;"><i class="fas fa-home"></i> 🏠<u>HOME</u></a></li>
+      <li>
+        <a href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf"
+           target="_blank" rel="noopener noreferrer" style="color: lightyellow;">
+          <i class="fas fa-file-alt"></i> 👨‍🎓<u>STUDENTS LIST</u>
+        </a>
+      </li>
+      <li><a href="homework.html" style="color: lightgreen;"><i class="fas fa-book"></i> 📚<u>HOMEWORK</u></a></li>
+      <li>
+        <a href="Notices.html" style="color: pink;">
+          <i class="fas fa-bullhorn"></i> 📢<u>NOTICE</u>
+        </a>
+      </li>
+      <li>
+        <a href="post.html" style="color: lightblue;">
+          <i class="fas fa-pencil-alt"></i> ✍️<u>POSTS</u>
+        </a>
+      </li>
+      <li><a href="#contact" style="color: black;"><i class="fas fa-address-book"></i> ☎️<u>CONTACT US</u></a></li>
+      <li>
+        <a href="#FeePayment" style="color: #F5DE9C;">
+          💸<u>FEE PAYMENT</u>
+        </a>
+      </li>
     </ul>
-</nav>
+  </nav>
 
-<main>
+  <main>
     <section id="contact">
-        <h2>📞 CONTACT US</h2>
-        <p><strong>🏫 School Address:</strong> Saraswati Senior Secondary Vidya Mandir, Deoria Khas, Deoria (U.P.)</p>
-        <p><strong>👨‍🏫 Class Teacher Phone:</strong> <a href="tel:+919451478144">+91 94514 78144</a></p>
-        <p><strong>💬 Developer WhatsApp:</strong> <a href="https://wa.me/919198426858">Chat on WhatsApp</a></p>
-        <p><strong>📧 Developer Email:</strong> <a href="mailto:priyanshusingh0606@gmail.com">priyanshusingh0606@gmail.com</a></p>
+      <h2>📞 CONTACT US</h2>
+      <p><strong>🏫 School Address:</strong> Saraswati Senior Secondary Vidya Mandir, Deoria Khas, Deoria (U.P.)</p>
+      <p><strong>👨‍🏫 Class Teacher Phone:</strong> <a href="tel:+919451478144">+91 94514 78144</a></p>
+      <p><strong>💬 Developer WhatsApp:</strong> <a href="https://wa.me/919198426858">Chat on WhatsApp</a></p>
+      <p><strong>📧 Developer Email:</strong> <a href="mailto:priyanshusingh0606@gmail.com">priyanshusingh0606@gmail.com</a></p>
     </section>
 
-    <section>
-        <h2>📄 STUDENT LIST</h2>
-        <a class="glow-button" href="#">📥 View Student List PDF</a>
+    <br><br>
+
+    <!-- 🔥 Glowing Button Section -->
+    <section id="StudentsList">
+      <h2>📄 STUDENT LIST</h2>
+      <a class="glow-button"
+         href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf"
+         target="_blank" rel="noopener noreferrer">
+         📥 View Student List PDF
+      </a>
     </section>
 
-    <section>
-        <h2>💸 ONLINE FEE PAYMENT</h2>
-        <a class="glow-button" href="#">📥 ONLINE FEE PAYMENT</a>
+    <br>
+
+    <section id="FeePayment">
+      <h2>💸 ONLINE FEE PAYMENT</h2>
+      <a class="glow-button"
+         href="https://deoriasvm.com/Student-Login">
+         📥 ONLINE FEE PAYMENT
+      </a>
     </section>
 
-    <section>
-        <h2>🌐 OFFICIAL WEBSITE</h2>
-        <a class="glow-button" href="#">📥 OFFICIAL WEBSITE</a>
-    </section>
+    <br>
 
-    <section>
-        <h2>🎓 TC REQUEST</h2>
-        <a class="glow-button" href="#">📥 TC REQUEST</a>
+    <section id="School Official Website">
+      <h2>🌐 OFFICIAL WEBSITE</h2>
+      <a class="glow-button"
+         href="https://deoriasvm.com/">
+         📥 OFFICIAL WEBSITE
+      </a>
     </section>
-</main>
+    <br>
+     <section id="TC Request">
+      <h2>🎓 TC REQUEST</h2>
+      <a class="glow-button"
+         href="https://deoriasvm.com/tc-request">
+         📥 TC REQUEST
+      </a>
+    </section>
+  </main>
 
-<footer>
+  <footer>
     <a href="#top" class="scroll-top">🚀 Fly to Top</a>
     <p>© 2025 SSSVM CLASS 10th F | 🙏 Made with Faith & Love</p>
-</footer>
-
+  </footer>
 </body>
-</html>
+    </html>
