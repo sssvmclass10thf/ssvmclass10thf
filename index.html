@@ -57,17 +57,42 @@
 
     /* ✅ Header Background with Vidya Bharti Logo */
    .header-container {
-  border: 3px solid black; /* Ya transparent bhi rakh sakta hai agar sirf glow chahiye */
-  border-radius: 12px;
+  position: relative;
   padding: 20px;
-  box-shadow:
-    0 0 10px red,
-    0 0 20px yellow,
-    0 0 30px limegreen,
-    0 0 40px cyan,
-    0 0 50px magenta;
-  transition: 0.3s ease-in-out;
-   }
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: orange;
+  z-index: 1;
+}
+
+/* Pseudo element for animated border */
+.header-container::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta, red);
+  background-size: 400% 400%;
+  border-radius: 15px;
+  z-index: -1;
+  animation: rotateBorder 8s linear infinite;
+  filter: blur(4px);
+}
+
+/* Animation for rotation */
+@keyframes rotateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+                              
     }
 
     .school-info h1, 
