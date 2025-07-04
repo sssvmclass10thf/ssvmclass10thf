@@ -2,194 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SSSVM Class 10-F</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
-    :root {
-      --bg-light: #f9f9f9;
-      --text-light: #111;
-      --bg-dark: #1e1e1e;
-      --text-dark: #f0f0f0;
-      --accent: #007bff;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      transition: background 0.3s, color 0.3s;
-      background: var(--bg-light);
-      color: var(--text-light);
-    }
-
-    body.dark {
-      background: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    header, footer {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .logo {
-      max-width: 80px;
-    }
-
-    .header-container {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav {
-      background: #007bff;
-      color: white;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hamburger {
-      font-size: 28px;
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      z-index: 999;
-      background: #007bff;
-      color: white;
-      padding: 6px 10px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -260px;
-      width: 250px;
-      height: 100%;
-      background: rgba(17, 17, 17, 0.95);
-      backdrop-filter: blur(5px);
-      padding-top: 60px;
-      transition: 0.3s;
-      z-index: 998;
-    }
-
-    .sidebar.open {
-      left: 0;
-    }
-
-    .sidebar a {
-      display: block;
-      padding: 14px 24px;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .sidebar a:hover {
-      background-color: #007bff;
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      z-index: 999;
-    }
-
-    .theme-toggle button {
-      background: #007bff;
-      color: white;
-      padding: 6px 12px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    main {
-      padding: 30px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    section {
-      margin: 40px 0;
-    }
-
+    /* ✅ Only Glowing Button CSS */
     .glow-button {
-      background-color: #007bff;
-      color: white;
-      border: none;
+      display: inline-block;
       padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background-color: #007bff;
+      border: none;
       border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 0 10px #007bff;
+      box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
       transition: 0.3s ease-in-out;
-      display: inline-block;
+      margin-top: 10px;
     }
 
     .glow-button:hover {
       box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
       transform: scale(1.05);
     }
-
-    footer {
-      background-color: #007bff;
-      color: white;
-    }
-
-    /* Mobile Styles */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-
-      /* ❌ Don't hide nav — so that nav and sidebar both show */
-      /* nav {
-        display: none;
-      } */
-    }
   </style>
 </head>
 <body>
-
-  <!-- ☰ Hamburger Icon -->
-  <div class="hamburger" onclick="toggleSidebar()">☰</div>
-
-  <!-- 🌗 Light/Dark Theme Toggle -->
-  <div class="theme-toggle">
-    <button onclick="toggleTheme()">🌓 Theme</button>
-  </div>
-
-  <!-- 📂 Sidebar Menu -->
-  <div id="sidebar" class="sidebar">
-    <a href="#home">🏠 Home</a>
-    <a href="#notices">📢 Notices</a>
-    <a href="#homework">📘 Homework</a>
-    <a href="#students">📄 Student List</a>
-    <a href="#post">📝 Posts</a>
-    <a href="#contact">📞 Contact Us</a>
-  </div>
-
-  <!-- 🏫 Header -->
-  <header id="home">
+  <header>
     <div class="header-container">
       <img src="logo.png" alt="School Logo" class="logo">
       <div class="school-info">
@@ -201,43 +44,28 @@
     </div>
   </header>
 
-  <!-- 📌 Top Nav Bar (Visible Always) -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#notices">Notices</a>
-    <a href="#homework">Homework</a>
-    <a href="#students">Student List</a>
-    <a href="#post">Posts</a>
-    <a href="#contact">Contact Us</a>
+    <ul>
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li>
+        <a href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" 
+           target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-alt"></i> Students List
+        </a>
+      </li>
+      <li><a href="homework.html"><i class="fas fa-book"></i> Homework</a></li>
+
+      <li><a href="Notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
+      <li>
+  <a href="post.html">
+    <i class="fas fa-pencil-alt"></i> Post
+  </a>
+      </li>
+      <li><a href="#contact"><i class="fas fa-address-book"></i> Contact Us</a></li>
+    </ul>
   </nav>
 
-  <!-- 📄 Main Content -->
   <main>
-
-    <section id="notices">
-      <h3>📢 Notices</h3>
-      <p>No notices available right now.</p>
-    </section>
-
-    <section id="homework">
-      <h3>📘 Homework</h3>
-      <p>Homework updates will appear here.</p>
-    </section>
-
-    <section id="students">
-      <h3>📄 Students List</h3>
-      <a class="glow-button"
-        href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf"
-        target="_blank" rel="noopener noreferrer">
-        📥 View Student List PDF
-      </a>
-    </section>
-
-    <section id="post">
-      <h3>📝 Posts</h3>
-      <p><a href="post.html" target="_blank" class="glow-button">Create / View Posts</a></p>
-    </section>
-
     <section id="contact">
       <h3>📞 Contact Us</h3>
       <p><strong>🏫 School Address:</strong> Saraswati Senior Secondary Vidya Mandir, Deoria Khas, Deoria (U.P.)</p>
@@ -245,29 +73,20 @@
       <p><strong>💬 Developer WhatsApp:</strong> <a href="https://wa.me/919198426858">Chat on WhatsApp</a></p>
       <p><strong>📧 Developer Email:</strong> <a href="mailto:priyanshusingh0606@gmail.com">priyanshusingh0606@gmail.com</a></p>
     </section>
+
+    <!-- 🔥 Glowing Button Section -->
+    <section id="StudentsList">
+      <h3>📄 Students List</h3>
+      <a class="glow-button" 
+         href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" 
+         target="_blank" rel="noopener noreferrer">
+         📥 View Student List PDF
+      </a>
+    </section>
   </main>
 
-  <!-- ✅ Footer -->
   <footer>
     <p>© 2025 SSSVM CLASS 10th F | 🙏 Made with Faith & Love</p>
   </footer>
-
-  <!-- ⚙️ JavaScript -->
-  <script>
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("open");
-    }
-
-    function toggleTheme() {
-      document.body.classList.toggle("dark");
-    }
-
-    // Sidebar auto-close on link click
-    document.querySelectorAll('.sidebar a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('sidebar').classList.remove('open');
-      });
-    });
-  </script>
 </body>
-    </html>
+</html>
