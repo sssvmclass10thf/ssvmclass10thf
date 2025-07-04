@@ -5,11 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SSSVM Class 10-F</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
-    /* ✅ Only Glowing Button CSS */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff3cd; /* Saffron color preserved */
+      padding: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+
+    .school-info {
+      text-align: center;
+    }
+
+    nav {
+      background-color: #222;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 10px 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff9800;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      border-radius: 12px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+
+    section p, section a {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #fff;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    /* ✅ Glowing Button */
     .glow-button {
       display: inline-block;
       padding: 12px 24px;
@@ -28,6 +122,27 @@
     .glow-button:hover {
       box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
       transform: scale(1.05);
+    }
+
+    /* ✅ Responsive Enhancements */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      .header-container {
+        flex-direction: column;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+      }
+
+      .glow-button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
@@ -54,13 +169,8 @@
         </a>
       </li>
       <li><a href="homework.html"><i class="fas fa-book"></i> Homework</a></li>
-
       <li><a href="Notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
-      <li>
-  <a href="post.html">
-    <i class="fas fa-pencil-alt"></i> Post
-  </a>
-      </li>
+      <li><a href="post.html"><i class="fas fa-pencil-alt"></i> Post</a></li>
       <li><a href="#contact"><i class="fas fa-address-book"></i> Contact Us</a></li>
     </ul>
   </nav>
@@ -89,4 +199,4 @@
     <p>© 2025 SSSVM CLASS 10th F | 🙏 Made with Faith & Love</p>
   </footer>
 </body>
-</html>
+  </html>
