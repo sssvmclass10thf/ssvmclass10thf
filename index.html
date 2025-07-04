@@ -1,48 +1,101 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SSSVM Class 10-F</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>  <style>
-    .rgb-border-container {
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ✅ Rotating RGB Border Only for Header */
+    .header-container {
       position: relative;
+      background-color: #ff6600;
       padding: 20px;
-      background-color: #ff7300;
-      border-radius: 10px;
-      z-index: 1;
-      overflow: hidden;
-    }
-
-    .rgb-border-container::before {
-      content: "";
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: linear-gradient(270deg, #ff0047, #2c34ff, #00ffe7, #00ff37, #ffec00, #ff0047);
-      background-size: 600% 600%;
       border-radius: 12px;
-      z-index: -1;
-      animation: rgb-rotate 15s linear infinite;
-      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+      overflow: hidden;
+      z-index: 1;
     }
 
-    @keyframes rgb-rotate {
+    .header-container::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+      background-size: 400% 400%;
+      border-radius: 14px;
+      z-index: -1;
+      animation: borderRotate 10s linear infinite;
+      filter: blur(4px);
+    }
+
+    @keyframes borderRotate {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    html {
-      scroll-behavior: smooth;
+    .school-info {
+      text-align: center;
+      color: white;
+      z-index: 2;
     }
-  </style></head><body id="top">
+
+    /* ✅ Tumhare original glowing buttons */
+    .glow-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+      transition: 0.3s ease-in-out;
+      margin-top: 10px;
+    }
+
+    .glow-button:hover {
+      box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
+      transform: scale(1.05);
+    }
+
+    .scroll-top {
+      display: inline-block;
+      background-color: #111;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 30px auto;
+      box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+      transition: 0.3s ease-in-out;
+    }
+
+    .scroll-top:hover {
+      background-color: #00f0ff;
+      color: #111;
+      box-shadow: 0 0 15px #00f0ff, 0 0 25px #00f0ff, 0 0 35px #00f0ff;
+    }
+  </style>
+</head>
+
+<body id="top">
   <header>
-    <div class="rgb-border-container">
-      <img src="logo.png" alt="School Logo" class="logo">
+    <div class="header-container">
       <div class="school-info">
         <h1>🕉️ Saraswati Senior Secondary Vidya Mandir</h1>
         <h2>Class 10th - Section F</h2>
@@ -50,7 +103,9 @@
         <p><strong>Developer:</strong> Priyanshu Singh</p>
       </div>
     </div>
-  </header>  <nav>
+  </header>
+
+  <nav>
     <ul>
       <li><a href="#" style="color: #E8C87F;"><i class="fas fa-home"></i> 🏠<u>HOME</u></a></li>
       <li>
@@ -76,45 +131,59 @@
         </a>
       </li>
     </ul>
-  </nav>  <main>
+  </nav>
+
+  <main>
     <section id="contact">
       <h2>📞 CONTACT US</h2>
       <p><strong>🏫 School Address:</strong> Saraswati Senior Secondary Vidya Mandir, Deoria Khas, Deoria (U.P.)</p>
       <p><strong>👨‍🏫 Class Teacher Phone:</strong> <a href="tel:+919451478144">+91 94514 78144</a></p>
       <p><strong>💬 Developer WhatsApp:</strong> <a href="https://wa.me/919198426858">Chat on WhatsApp</a></p>
       <p><strong>📧 Developer Email:</strong> <a href="mailto:priyanshusingh0606@gmail.com">priyanshusingh0606@gmail.com</a></p>
-    </section><br><br>
+    </section>
 
-<section id="StudentsList">
-  <h2>📄 STUDENT LIST</h2>
-  <a class="glow-button" href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank" rel="noopener noreferrer">📥 View Student List PDF</a>
-</section>
+    <br><br>
 
-<br>
+    <section id="StudentsList">
+      <h2>📄 STUDENT LIST</h2>
+      <a class="glow-button" href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank" rel="noopener noreferrer">
+        📥 View Student List PDF
+      </a>
+    </section>
 
-<section id="FeePayment">
-  <h2>💸 ONLINE FEE PAYMENT</h2>
-  <a class="glow-button" href="https://deoriasvm.com/Student-Login">📥 ONLINE FEE PAYMENT</a>
-</section>
+    <br>
 
-<br>
+    <section id="FeePayment">
+      <h2>💸 ONLINE FEE PAYMENT</h2>
+      <a class="glow-button" href="https://deoriasvm.com/Student-Login">
+        📥 ONLINE FEE PAYMENT
+      </a>
+    </section>
 
-<section id="School Official Website">
-  <h2>🌐 OFFICIAL WEBSITE</h2>
-  <a class="glow-button" href="https://deoriasvm.com/">📥 OFFICIAL WEBSITE</a>
-</section>
+    <br>
 
-<br>
+    <section id="School Official Website">
+      <h2>🌐 OFFICIAL WEBSITE</h2>
+      <a class="glow-button" href="https://deoriasvm.com/">
+        📥 OFFICIAL WEBSITE
+      </a>
+    </section>
 
-<section id="TC Request">
-  <h2>🎓 TC REQUEST</h2>
-  <a class="glow-button" href="https://deoriasvm.com/tc-request">📥 TC REQUEST</a>
-</section>
+    <br>
 
-  </main>  <footer>
+    <section id="TC Request">
+      <h2>🎓 TC REQUEST</h2>
+      <a class="glow-button" href="https://deoriasvm.com/tc-request">
+        📥 TC REQUEST
+      </a>
+    </section>
+  </main>
+
+  <footer>
     <a href="#top" class="scroll-top">🚀 Fly to Top</a>
     <p>© 2025 SSSVM CLASS 10th F | 🙏 Made with Faith & Love</p>
   </footer>
 </body>
-  </html>
+      </html>
+                                                                                                       </html>
 
