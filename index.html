@@ -1,199 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SSSVM Class 10-F</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>SSSVM Class 10-F</title>  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="styles.css" />  
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>    <style>  
+    /* ✅ Only Glowing Button CSS */  
+    .glow-button {  
+      display: inline-block;  
+      padding: 12px 24px;  
+      font-size: 16px;  
+      font-weight: 600;  
+      color: white;  
+      background-color: #007bff;  
+      border: none;  
+      border-radius: 8px;  
+      text-decoration: none;  
+      box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;  
+      transition: 0.3s ease-in-out;  
+      margin-top: 10px;  
+    }  
+  
+    .glow-button:hover {  
+      box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;  
+      transform: scale(1.05);  
+    }  
+  </style>  </head>  
+<body>  
+  <header>  
+    <div class="header-container">  
+      <img src="logo.png" alt="School Logo" class="logo">  
+      <div class="school-info">  
+        <h1>🕉️ Saraswati Senior Secondary Vidya Mandir</h1>  
+        <h2>Class 10th - Section F</h2>  
+        <p><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>  
+        <p><strong>Developer:</strong> Priyanshu Singh</p>  
+      </div>  
+    </div>  
+  </header>    <nav>  
+    <ul>  
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>  
+      <li>  
+        <a href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf"   
+           target="_blank" rel="noopener noreferrer">  
+          <i class="fas fa-file-alt"></i> Students List  
+        </a>  
+      </li>  
+      <li><a href="homework.html"><i class="fas fa-book"></i> Homework</a></li>  <li><a href="Notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>  
+  <li>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+  <a href="post.html">  
+    <i class="fas fa-pencil-alt"></i> Post  
+  </a>  
+      </li>  
+      <li><a href="#contact"><i class="fas fa-address-book"></i> Contact Us</a></li>  
+    </ul>  
+  </nav>    <main>  
+    <section id="contact">  
+      <h3>📞 Contact Us</h3>  
+      <p><strong>🏫 School Address:</strong> Saraswati Senior Secondary Vidya Mandir, Deoria Khas, Deoria (U.P.)</p>  
+      <p><strong>👨‍🏫 Class Teacher Phone:</strong> <a href="tel:+919451478144">+91 94514 78144</a></p>  
+      <p><strong>💬 Developer WhatsApp:</strong> <a href="https://wa.me/919198426858">Chat on WhatsApp</a></p>  
+      <p><strong>📧 Developer Email:</strong> <a href="mailto:priyanshusingh0606@gmail.com">priyanshusingh0606@gmail.com</a></p>  
+    </section>  <!-- 🔥 Glowing Button Section -->  
+<section id="StudentsList">  
+  <h3>📄 Students List</h3>  
+  <a class="glow-button"   
+     href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf"   
+     target="_blank" rel="noopener noreferrer">  
+     📥 View Student List PDF  
+  </a>  
+</section>
 
-    header {
-      background-color: #fff3cd; /* saffron color preserved */
-      padding: 20px 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-    }
-
-    .school-info {
-      text-align: center;
-    }
-
-    /* ✅ ORIGINAL NAVIGATION BAR */
-    nav {
-      background-color: #222;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 10px 0;
-      flex-wrap: wrap;
-    }
-
-    nav li {
-      margin: 10px 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ff9800;
-    }
-
-    /* ✅ GLOWING BUTTON */
-    .glow-button {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: 600;
-      color: white;
-      background-color: #007bff;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
-      transition: 0.3s ease-in-out;
-      margin-top: 10px;
-    }
-
-    .glow-button:hover {
-      box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
-      transform: scale(1.05);
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
-      border-radius: 12px;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    section h3 {
-      font-size: 22px;
-      margin-bottom: 15px;
-      color: #007bff;
-    }
-
-    section p, section a {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #222;
-      color: #fff;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .logo {
-        width: 60px;
-        height: 60px;
-      }
-
-      .glow-button {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <img src="logo.png" alt="School Logo" class="logo">
-      <div class="school-info">
-        <h1>🕉️ Saraswati Senior Secondary Vidya Mandir</h1>
-        <h2>Class 10th - Section F</h2>
-        <p><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>
-        <p><strong>Developer:</strong> Priyanshu Singh</p>
-      </div>
-    </div>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-      <li>
-        <a href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" 
-           target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-file-alt"></i> Students List
-        </a>
-      </li>
-      <li><a href="homework.html"><i class="fas fa-book"></i> Homework</a></li>
-      <li><a href="Notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
-      <li><a href="post.html"><i class="fas fa-pencil-alt"></i> Post</a></li>
-      <li><a href="#contact"><i class="fas fa-address-book"></i> Contact Us</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section id="contact">
-      <h3>📞 Contact Us</h3>
-      <p><strong>🏫 School Address:</strong> Saraswati Senior Secondary Vidya Mandir, Deoria Khas, Deoria (U.P.)</p>
-      <p><strong>👨‍🏫 Class Teacher Phone:</strong> <a href="tel:+919451478144">+91 94514 78144</a></p>
-      <p><strong>💬 Developer WhatsApp:</strong> <a href="https://wa.me/919198426858">Chat on WhatsApp</a></p>
-      <p><strong>📧 Developer Email:</strong> <a href="mailto:priyanshusingh0606@gmail.com">priyanshusingh0606@gmail.com</a></p>
-    </section>
-
-    <section id="StudentsList">
-      <h3>📄 Students List</h3>
-      <a class="glow-button" 
-         href="https://docs.google.com/gview?url=https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" 
-         target="_blank" rel="noopener noreferrer">
-         📥 View Student List PDF
-      </a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 SSSVM CLASS 10th F | 🙏 Made with Faith & Love</p>
-  </footer>
-</body>
-  </html>
+  </main>    <footer>  
+    <p>© 2025 SSSVM CLASS 10th F | 🙏 Made with Faith & Love</p>  
+  </footer>  
+</body>  
+</html>
