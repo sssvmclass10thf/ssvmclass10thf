@@ -56,19 +56,18 @@
     }
 
     /* ✅ Header Background with Vidya Bharti Logo */
-    .header-container {
-  background-color: #ff6600; /* Safron background */
-  background-image: url('https://drive.google.com/uc?export=view&id=16yN6AiNyBNUh8Ct_TKQNh3YziE5IX3y8');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 150px;
+   .header-container {
+  border: 3px solid black; /* Ya transparent bhi rakh sakta hai agar sirf glow chahiye */
+  border-radius: 12px;
   padding: 20px;
-  text-align: center;
-  color: white;
-  border: 4px solid black;
-  border-radius: 10px;
-  box-shadow: 0 0 15px black, 0 0 30px black; /* Glowing effect */
-    
+  box-shadow:
+    0 0 10px red,
+    0 0 20px yellow,
+    0 0 30px limegreen,
+    0 0 40px cyan,
+    0 0 50px magenta;
+  transition: 0.3s ease-in-out;
+   }
     }
 
     .school-info h1, 
@@ -76,7 +75,7 @@
     .school-info p {
       margin: 5px 0;
     }
-
+ 
   </style>
 </head>
 
