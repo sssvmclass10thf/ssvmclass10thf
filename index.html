@@ -16,7 +16,7 @@
     }
 
     header {
-      background-color: #fff3cd; /* Saffron color preserved */
+      background-color: #fff3cd; /* saffron color preserved */
       padding: 20px 0;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -41,6 +41,7 @@
       text-align: center;
     }
 
+    /* ✅ ORIGINAL NAVIGATION BAR */
     nav {
       background-color: #222;
     }
@@ -68,6 +69,27 @@
 
     nav a:hover {
       color: #ff9800;
+    }
+
+    /* ✅ GLOWING BUTTON */
+    .glow-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+      transition: 0.3s ease-in-out;
+      margin-top: 10px;
+    }
+
+    .glow-button:hover {
+      box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
+      transform: scale(1.05);
     }
 
     main {
@@ -103,35 +125,11 @@
       margin-top: 40px;
     }
 
-    /* ✅ Glowing Button */
-    .glow-button {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: 600;
-      color: white;
-      background-color: #007bff;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
-      transition: 0.3s ease-in-out;
-      margin-top: 10px;
-    }
-
-    .glow-button:hover {
-      box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
-      transform: scale(1.05);
-    }
-
-    /* ✅ Responsive Enhancements */
+    /* Responsive */
     @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-      }
-
       .header-container {
         flex-direction: column;
+        text-align: center;
       }
 
       .logo {
@@ -184,7 +182,6 @@
       <p><strong>📧 Developer Email:</strong> <a href="mailto:priyanshusingh0606@gmail.com">priyanshusingh0606@gmail.com</a></p>
     </section>
 
-    <!-- 🔥 Glowing Button Section -->
     <section id="StudentsList">
       <h3>📄 Students List</h3>
       <a class="glow-button" 
