@@ -56,44 +56,50 @@
     }
 
     /* ✅ Header Background with Vidya Bharti Logo */
-   .header-container {
+  .header-container {
   position: relative;
   padding: 20px;
   border-radius: 12px;
-  overflow: hidden;
   background-color: orange;
   z-index: 1;
+  overflow: hidden;
 }
 
-/* Pseudo element for animated border */
+/* Outer animated border */
 .header-container::before {
   content: '';
   position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  background: linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta, red);
-  background-size: 400% 400%;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
   border-radius: 15px;
+  background: conic-gradient(
+    red, orange, yellow, green, cyan, blue, violet, red
+  );
   z-index: -1;
-  animation: rotateBorder 8s linear infinite;
+  animation: spin 3s linear infinite;
   filter: blur(4px);
+  padding: 5px;
+  mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
 }
 
-/* Animation for rotation */
-@keyframes rotateBorder {
+/* Animation for continuous rotation */
+@keyframes spin {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    transform: rotate(0deg);
   }
   100% {
-    background-position: 0% 50%;
+    transform: rotate(360deg);
   }
-                              
-    }
+      }
 
     .school-info h1, 
     .school-info h2,
