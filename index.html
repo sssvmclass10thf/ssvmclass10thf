@@ -23,18 +23,17 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      padding: 15px 10px; /* chhota padding */
+      padding: 15px 10px;
       text-align: center;
       border: 3px solid black;
       border-radius: 8px;
-      /* black glow effect */
       box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
       margin: 15px;
     }
 
     .school-info h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem; /* chhota font size */
+      font-size: 2.2rem;
       color: #000000;
       font-weight: 900;
       margin: 8px 0 12px 0;
@@ -46,7 +45,7 @@
       color: #041029;
       font-weight: 600;
       margin: 5px 0;
-      font-size: 0.95rem; /* halka chhota */
+      font-size: 0.95rem;
     }
 
     nav {
@@ -60,7 +59,7 @@
       margin: 20px auto 30px auto;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 16px; /* vertical and horizontal spacing */
+      gap: 12px 16px;
       justify-content: center;
     }
 
@@ -156,6 +155,23 @@
       color: #666;
       margin-bottom: 30px;
     }
+
+    .main-box {
+      background-color: #ffdb99; /* Slightly darker than before */
+      border: 3px solid #000;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      padding: 30px 20px;
+      margin: 15px;
+    }
+
+    .main-box section:first-child {
+      margin-top: 0;
+    }
+
+    .main-box section:first-child h2 {
+      margin-top: 0;
+    }
   </style>
 </head>
 
@@ -184,31 +200,33 @@
   </nav>
 
   <main>
-    <section id="StudentsList">
-      <h2>📄 STUDENT LIST</h2>
-      <a class="glow-button" href="https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank">📥 View Student List PDF</a>
-    </section>
+    <div class="main-box">
+      <section id="StudentsList">
+        <h2>📄 STUDENT LIST</h2>
+        <a class="glow-button" href="https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank">📥 View Student List PDF</a>
+      </section>
 
-    <br />
+      <br />
 
-    <section id="FeePayment">
-      <h2>💸 ONLINE FEE PAYMENT</h2>
-      <a class="glow-button" href="https://deoriasvm.com/Student-Login">📥 ONLINE FEE PAYMENT</a>
-    </section>
+      <section id="FeePayment">
+        <h2>💸 ONLINE FEE PAYMENT</h2>
+        <a class="glow-button" href="https://deoriasvm.com/Student-Login">📥 ONLINE FEE PAYMENT</a>
+      </section>
 
-    <br />
+      <br />
 
-    <section id="School Official Website">
-      <h2>🌐 OFFICIAL WEBSITE</h2>
-      <a class="glow-button" href="https://deoriasvm.com/">📥 OFFICIAL WEBSITE</a>
-    </section>
+      <section id="School Official Website">
+        <h2>🌐 OFFICIAL WEBSITE</h2>
+        <a class="glow-button" href="https://deoriasvm.com/">📥 OFFICIAL WEBSITE</a>
+      </section>
 
-    <br />
+      <br />
 
-    <section id="TC Request">
-      <h2>🎓 TC REQUEST</h2>
-      <a class="glow-button" href="https://deoriasvm.com/tc-request">📥 TC REQUEST</a>
-    </section>
+      <section id="TC Request">
+        <h2>🎓 TC REQUEST</h2>
+        <a class="glow-button" href="https://deoriasvm.com/tc-request">📥 TC REQUEST</a>
+      </section>
+    </div>
 
     <br /><br />
 
@@ -226,4 +244,4 @@
     <p>© 2025 SSSVM CLASS 10th F | 🙏 Made with Faith & Love</p>
   </footer>
 </body>
-</html>
+        </html>
