@@ -78,6 +78,63 @@
       box-shadow: 0 0 20px #2bcce6, 0 0 40px #2bcce6;
       transform: scale(1.05);
     }
+
+    /* Subject Timetable Section */
+    .timetable-section {
+  background-color: #e0f7fa; /* हल्का नीला बैकग्राउंड */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  overflow-x: auto; /* यदि कंटेंट बहुत चौड़ा हो तो स्क्रॉलिंग सक्षम करें */
+  width: 100%; /* सुनिश्चित करें कि बॉक्स पूरी चौड़ाई में फैले */
+  box-sizing: border-box; /* padding और border को width में शामिल करें */
+}
+
+    .timetable-section h2 {
+      color: #333;
+      font-size: 26px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      min-width: 800px;           /* Prevents too much shrink */
+      border-collapse: collapse;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    th, td {
+      border: 1px solid #bbb;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #00796b;
+      color: white;
+    }
+
+    td {
+      background-color: #ffffff;
+      color: #00796b;
+    }
+
+    td.odd {
+      background-color: #e0f2f1;
+    }
+
+    td.even {
+      background-color: #ffffff;
+    }
+
+    td.break {
+      background-color: #ffeb3b;
+      color: #000;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -89,15 +146,45 @@
     <div class="notice-box">
       <h2>📢 Latest Class 10-F Notices</h2>
       <ul>
-        <li>🗓️ Classes are running continuously from 20 JUNE 2025 after the summer vacations.</li>  
-    <li>📚 Bring IT classwork copy.</li>  
-    <li>🏫 1st Periodic Test Answer Sheet will be shown on 8th July - 9th July</li>  
-    <li>📚 Complete History's work daily.</li>
-        <li>🔔School timing 7:30 a.m. - 12:40 p.m.</li>
+        <li>🗓️ Classes are running continuously from 20 JUNE 2025 after the summer vacations.</li>
+        <li>📚 Bring IT classwork copy.</li>
+        <li>🏫 1st Periodic Test Answer Sheet will be shown on 8th July - 9th July</li>
+        <li>📚 Complete History's work daily.</li>
+        <li>🔔 School timing 7:30 a.m. - 12:40 p.m.</li>
       </ul>
-
-      <a class="back-button" href="index.html">⬅️ Back to Home</a>
+      
     </div>
+
+    <!-- Subject Timetable Section -->
+    <div class="timetable-section">
+      <h2>📚 SUBJECT TIMETABLE</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>🗓️ Day</th>
+<th>⏰ 1st Period</th>
+<th>⏰ 2nd Period</th>
+<th>⏰ 3rd Period</th>
+<th>⏰ 4th Period</th>
+<th>⏰ 5th Period</th>
+<th>⏰ 6th Period</th>
+<th>⏰ 7th Period</th>
+<th>⏰ 8th Period</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Monday</td><td>S.st.</td><td>Chemistry</td><td>Maths</td><td>English</td><td>Hindi</td><td>English</td><td>Geography</td><td>Biology</td></tr>
+          <tr><td>Tuesday</td><td>S.st.</td><td>Chemistry</td><td>Maths</td><td>English</td><td>Hindi</td><td>English</td><td>Geography</td><td>Biology</td></tr>
+          <tr><td>Wednesday</td><td>S.st.</td><td>Chemistry</td><td>Maths</td><td>English</td><td>Hindi</td><td>English</td><td>Geography</td><td>Biology</td></tr>
+          <tr><td>Thursday</td><td>S.st.</td><td>Chemistry</td><td>Maths</td><td>English</td><td>Hindi</td><td>Maths</td><td>Physical Ed.</td><td>IT</td></tr>
+          <tr><td>Friday</td><td>S.st.</td><td>Chemistry</td><td>Maths</td><td>English</td><td>Hindi</td><td>Maths</td><td>Physical Ed.</td><td>IT</td></tr>
+          <tr><td>Saturday</td><td>S.st.</td><td>Chemistry</td><td>Maths</td><td>English</td><td>Hindi</td><td>Maths</td><td>Physical Ed.</td><td>IT</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <a class="back-button" href="index.html">⬅️ Back to Home</a>
   </div>
 </body>
-  </html>
+</html>
