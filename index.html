@@ -15,7 +15,6 @@
       margin: 0;
       background-color: #fff1cc;
       color: #222;
-      overflow-x: hidden; /* Prevent horizontal scroll */
     }
 
     .header-container {
@@ -41,8 +40,7 @@
       text-transform: uppercase;
     }
 
-    .school-info h2,
-    .school-info p {
+    .school-info h2, .school-info p {
       color: #041029;
       font-weight: 600;
       margin: 5px 0;
@@ -150,15 +148,8 @@
       background-color: #fffdf3;
     }
 
-    #contact h2 {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    #contact p {
-      font-size: 16px;
-      margin: 8px 0;
-    }
+    #contact h2 { text-align: center; margin-bottom: 15px; }
+    #contact p { font-size: 16px; margin: 8px 0; }
 
     footer {
       text-align: center;
@@ -178,25 +169,26 @@
       margin: 15px;
     }
 
-    /* Sidebar styles */
     .side-nav {
+      height: 100%;
+      width: 0;
       position: fixed;
+      z-index: 1200;
       top: 0;
       left: 0;
-      height: 100vh;
-      width: 0; /* Hidden initially */
       background-color: #ffdb99;
+      overflow-x: hidden;
       overflow-y: auto;
-      transition: width 0.3s ease;
-      z-index: 1200;
-      border-right: 3px solid black;
-      border-radius: 0 20px 20px 0;
-      box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+      transition: 0.4s ease;
       padding-top: 60px;
+      box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+      border-right: 3px solid #000;
+      border-radius: 0 20px 20px 0;
+      max-width: 260px;
     }
 
     .side-nav.open {
-      width: 260px; /* Width when visible */
+      width: 260px;
     }
 
     .side-nav a {
@@ -219,19 +211,12 @@
       transform: translateX(0);
     }
 
-    .side-nav a i {
-      margin-right: 10px;
-      font-size: 18px;
-      vertical-align: middle;
-    }
-
     .side-nav a:hover {
       background-color: #ffd580;
       color: #000;
       box-shadow: 0 0 10px #ffb347;
     }
 
-    /* Hamburger menu icon */
     .menu-icon {
       font-size: 28px;
       cursor: pointer;
@@ -243,18 +228,9 @@
       background: #ffdb99;
       padding: 6px 12px;
       border-radius: 8px;
-      border: 3px solid black; /* Black border */
-      box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5); /* Glow */
-      user-select: none;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 8px rgba(0,0,0,0.15);
     }
 
-    .menu-icon:hover {
-      background: #ffd580;
-      box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.7);
-    }
-
-    /* Overlay for sidebar */
     #overlay {
       display: none;
       position: fixed;
@@ -263,43 +239,34 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0,0,0,0.3);
-      transition: opacity 0.3s ease;
-    }
-
-    #overlay.active {
-      display: block;
-      opacity: 1;
+      background: transparent;
     }
   </style>
 </head>
+
 <body id="top">
 
-  <!-- Sidebar -->
-  <div id="sideNav" class="side-nav" aria-label="Sidebar navigation">
-    <a href="#" class="btn btn-home"><i class="fas fa-home"></i> 🏠 HOME</a>
-    <a href="https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank" class="btn btn-students"><i class="fas fa-file-alt"></i> 👨‍🎓 STUDENTS LIST</a>
-    <a href="homework.html" class="btn btn-homework"><i class="fas fa-book"></i> 📚 HOMEWORK</a>
-    <a href="Notices.html" class="btn btn-notice"><i class="fas fa-bullhorn"></i> 📢 NOTICE</a>
-    <a href="post.html" class="btn btn-posts"><i class="fas fa-pencil-alt"></i> ✍️ POSTS</a>
-    <a href="Books.html" class="btn btn-books"><i class="fas fa-book-open"></i> 📖 BOOKS</a>
-    <a href="#contact" class="btn btn-contact"><i class="fas fa-address-book"></i> ☎️ CONTACT</a>
-    <a href="#FeePayment" class="btn btn-fee"><i class="fas fa-money-bill-wave"></i> 💸 FEE PAYMENT</a>
+  <div id="sideNav" class="side-nav">
+    <a href="#">🏠 HOME</a>
+    <a href="https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank">👨‍🎓 STUDENTS LIST</a>
+    <a href="homework.html">📚 HOMEWORK</a>
+    <a href="Notices.html">📢 NOTICE</a>
+    <a href="post.html">✍️ POSTS</a>
+    <a href="Books.html">📖 BOOKS</a>
+    <a href="#contact">☎️ CONTACT</a>
+    <a href="#FeePayment">💸 FEE PAYMENT</a>
   </div>
 
-  <!-- Overlay -->
   <div id="overlay"></div>
-
-  <!-- Hamburger menu icon -->
-  <span class="menu-icon" id="menuToggle" aria-label="Toggle menu">&#9776;</span>
+  <span class="menu-icon" id="menuToggle">&#9776;</span>
 
   <header>
     <div class="header-container">
       <div class="school-info">
         <h1>🕉️<br> Saraswati Senior Secondary Vidya Mandir</h1>
-        <h2 style="font-size: 20px;">Class 10th - Section F</h2>
-        <p style="font-size: 16px;"><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>
-        <strong style="font-size: 14px;">(Developer:</strong> 
+        <h2>Class 10th - Section F</h2>
+        <p><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>
+        <strong>(Developer:</strong> 
         <span style="font-family: 'Dancing Script', cursive; font-size: 17px; color: #333;">Priyanshu Singh</span>)
       </div>
     </div>
@@ -314,14 +281,14 @@
 
   <nav>
     <ul class="nav-buttons">
-      <li><a href="#" class="btn btn-home"><i class="fas fa-home"></i> 🏠 HOME</a></li>
-      <li><a href="https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" class="btn btn-students" target="_blank"><i class="fas fa-file-alt"></i> 👨‍🎓 STUDENTS LIST</a></li>
-      <li><a href="homework.html" class="btn btn-homework"><i class="fas fa-book"></i> 📚 HOMEWORK</a></li>
-      <li><a href="Notices.html" class="btn btn-notice"><i class="fas fa-bullhorn"></i> 📢 NOTICE</a></li>
-      <li><a href="post.html" class="btn btn-posts"><i class="fas fa-pencil-alt"></i> ✍️ POSTS</a></li>
-      <li><a href="Books.html" class="btn btn-books"><i class="fas fa-book-open"></i> 📖 BOOKS</a></li>
-      <li><a href="#contact" class="btn btn-contact"><i class="fas fa-address-book"></i> ☎️ CONTACT</a></li>
-      <li><a href="#FeePayment" class="btn btn-fee"><i class="fas fa-money-bill-wave"></i> 💸 FEE PAYMENT</a></li>
+      <li><a href="#" class="btn btn-home">🏠 HOME</a></li>
+      <li><a href="https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" class="btn btn-students" target="_blank">👨‍🎓 STUDENTS LIST</a></li>
+      <li><a href="homework.html" class="btn btn-homework">📚 HOMEWORK</a></li>
+      <li><a href="Notices.html" class="btn btn-notice">📢 NOTICE</a></li>
+      <li><a href="post.html" class="btn btn-posts">✍️ POSTS</a></li>
+      <li><a href="Books.html" class="btn btn-books">📖 BOOKS</a></li>
+      <li><a href="#contact" class="btn btn-contact">☎️ CONTACT</a></li>
+      <li><a href="#FeePayment" class="btn btn-fee">💸 FEE PAYMENT</a></li>
     </ul>
   </nav>
 
@@ -341,14 +308,14 @@
 
       <br />
 
-      <section id="SchoolOfficialWebsite">
+      <section id="School Official Website">
         <h2>🌐 OFFICIAL WEBSITE</h2>
         <a class="glow-button" href="https://deoriasvm.com/">📥 OFFICIAL WEBSITE</a>
       </section>
 
       <br />
 
-      <section id="TCRequest">
+      <section id="TC Request">
         <h2>🎓 TC REQUEST</h2>
         <a class="glow-button" href="https://deoriasvm.com/tc-request">📥 TC REQUEST</a>
       </section>
@@ -377,12 +344,14 @@
 
     function openNav() {
       sideNav.classList.add("open");
-      overlay.classList.add("active");
+      overlay.style.display = "block";
+      document.body.style.overflow = "hidden";
     }
 
     function closeNav() {
       sideNav.classList.remove("open");
-      overlay.classList.remove("active");
+      overlay.style.display = "none";
+      document.body.style.overflow = "auto";
     }
 
     function toggleNav() {
@@ -395,12 +364,11 @@
 
     menuToggle.addEventListener("click", toggleNav);
     overlay.addEventListener("click", closeNav);
-
-    document.addEventListener("keydown", e => {
+    document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && sideNav.classList.contains("open")) {
         closeNav();
       }
     });
   </script>
 </body>
-  </html>
+                                </html>
