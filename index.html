@@ -6,7 +6,7 @@
   <title>SSSVM Class 10-F</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700;900&family=Dancing+Script&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
@@ -15,6 +15,37 @@
       margin: 0;
       background-color: #fff1cc;
       color: #222;
+    }
+
+    /* Welcome Banner - Centered on page */
+    .welcome-banner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 450px;
+      background: linear-gradient(45deg, #ffd966, #ff914d);
+      color: #111;
+      text-align: center;
+      font-size: 17px;
+      font-weight: bold;
+      padding: 14px 20px;
+      z-index: 9999;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      animation: fadeInCenter 0.3s ease forwards;
+    }
+
+    @keyframes fadeInCenter {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
     }
 
     .header-container {
@@ -64,13 +95,31 @@
     }
 
     .nav-buttons {
-      list-style: none;
+   list-style: none;
       padding: 10px;
       margin: 20px auto 30px auto;
       display: flex;
       flex-wrap: wrap;
       gap: 12px 16px;
       justify-content: center;
+    }
+
+    .nav-buttons::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .nav-buttons::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .nav-buttons::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 10px;
+    }
+
+    .nav-buttons li {
+      display: inline-block;
+      flex: 0 0 auto;
     }
 
     .nav-buttons .btn {
@@ -169,9 +218,8 @@
       margin: 15px;
     }
 
-    /* Updated side-nav with scroll */
     .side-nav {
-      height: 100vh;               /* Full viewport height */
+      height: 100vh;
       max-height: 100vh;
       width: 0;
       position: fixed;
@@ -180,8 +228,7 @@
       left: 0;
       background-color: #ffdb99;
       overflow-x: hidden;
-      overflow-y: auto;           /* vertical scroll when needed */
-      -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+      overflow-y: auto;
       transition: 0.4s ease;
       padding-top: 60px;
       box-shadow: 3px 0 10px rgba(0,0,0,0.3);
@@ -190,9 +237,7 @@
       max-width: 260px;
     }
 
-    .side-nav.open {
-      width: 260px;
-    }
+    .side-nav.open { width: 260px; }
 
     .side-nav a {
       opacity: 0;
@@ -248,6 +293,9 @@
 </head>
 
 <body id="top">
+  <div id="welcomeBanner" class="welcome-banner">
+    👋 Welcome to Class 10-F Website!
+  </div>
 
   <div id="sideNav" class="side-nav">
     <a href="#" onclick="closeNav()">🏠 HOME</a>
@@ -256,10 +304,10 @@
     <a href="Notices.html">📢 NOTICE</a>
     <a href="post.html">✍️ POSTS</a>
     <a href="Books.html">📖 BOOKS</a>
-    <a href="#contact" onclick="closeNav()">☎️ CONTACT</a>
+    <a href="#contact" onclick="closeNav()">☎️ CONTACT US</a>
     <a href="#FeePayment" onclick="closeNav()">💸 FEE PAYMENT</a>
     <a href="#" onclick="shareWebsite()">📤 SHARE WEBSITE</a>
-    <a href="https://wa.me/?text=Check%20out%20the%20SSSVM%20Class%2010-F%20website:%20https%3A%2F%2Fsssvmclass10thf.github.io" target="_blank">💬 SHARE ON WHATSAPP</a>
+    <a href="https://wa.me/?text=Check%20out%20the%20SSSVM%20Class%2010-F%20website:%20https%3A%2F%2Fsssvmclass10thf.github.io/ssvmclass10thf/" target="_blank">💬 SHARE ON WHATSAPP</a>
   </div>
 
   <div id="overlay"></div>
@@ -271,11 +319,9 @@
         <h1>🕉️<br> Saraswati Senior Secondary Vidya Mandir</h1>
         <h2>Class 10th - Section F</h2>
         <p><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>
-        <strong>(Developer:</strong> 
-        <span style="font-family: 'Dancing Script', cursive; font-size: 17px; color: #333;">Priyanshu Singh</span>)
+        <strong>(Developer:</strong> <span style="font-family: 'Dancing Script', cursive; font-size: 17px; color: #333;">Priyanshu Singh</span>)
       </div>
     </div>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
   </header>
 
   <div class="notice-bar">
@@ -287,7 +333,7 @@
   <nav>
     <ul class="nav-buttons">
       <li><a href="#" class="btn btn-home">🏠 HOME</a></li>
-      <li><a href="https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" class="btn btn-students" target="_blank">👨‍🎓 STUDENTS LIST</a></li>
+      <li><a href="https://sssvmclass10thf.github.io/sssvmclass10thf/Fancy_Student_List.pdf" class="btn btn-students" target="_blank">👨‍🎓 STUDENTS LIST</a></li>
       <li><a href="homework.html" class="btn btn-homework">📚 HOMEWORK</a></li>
       <li><a href="Notices.html" class="btn btn-notice">📢 NOTICE</a></li>
       <li><a href="post.html" class="btn btn-posts">✍️ POSTS</a></li>
@@ -301,7 +347,7 @@
     <div class="main-box">
       <section id="StudentsList">
         <h2>📄 STUDENT LIST</h2>
-        <a class="glow-button" href="https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank">📥 View Student List PDF</a>
+        <a class="glow-button" href="https://sssvmclass10thf.github.io/sssvmclass10thf/Fancy_Student_List.pdf" target="_blank">📥 View Student List PDF</a>
       </section>
 
       <br />
@@ -387,7 +433,6 @@
           .then(() => console.log('Shared successfully'))
           .catch((err) => console.log('Share failed', err));
       } else {
-        // Fallback for unsupported browsers
         const dummy = document.createElement("input");
         document.body.appendChild(dummy);
         dummy.value = shareData.url;
@@ -397,6 +442,19 @@
         alert("🔗 Link copied! You can now paste it anywhere.");
       }
     }
+
+    // Auto-hide welcome banner
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        const banner = document.getElementById('welcomeBanner');
+        if (banner) {
+          banner.style.transition = "all 0.5s ease";
+          banner.style.opacity = "0";
+          banner.style.top = "-100px";
+          setTimeout(() => banner.remove(), 600);
+        }
+      }, 4000);
+    });
   </script>
 </body>
-  </html>
+</html>
