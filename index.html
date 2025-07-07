@@ -169,8 +169,10 @@
       margin: 15px;
     }
 
+    /* Updated side-nav with scroll */
     .side-nav {
-      height: 100%;
+      height: 100vh;               /* Full viewport height */
+      max-height: 100vh;
       width: 0;
       position: fixed;
       z-index: 1200;
@@ -178,7 +180,8 @@
       left: 0;
       background-color: #ffdb99;
       overflow-x: hidden;
-      overflow-y: auto;
+      overflow-y: auto;           /* vertical scroll when needed */
+      -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
       transition: 0.4s ease;
       padding-top: 60px;
       box-shadow: 3px 0 10px rgba(0,0,0,0.3);
@@ -255,6 +258,8 @@
     <a href="Books.html">📖 BOOKS</a>
     <a href="#contact" onclick="closeNav()">☎️ CONTACT</a>
     <a href="#FeePayment" onclick="closeNav()">💸 FEE PAYMENT</a>
+    <a href="#" onclick="shareWebsite()">📤 SHARE WEBSITE</a>
+    <a href="https://wa.me/?text=Check%20out%20the%20SSSVM%20Class%2010-F%20website:%20https%3A%2F%2Fsssvmclass10thf.github.io" target="_blank">💬 SHARE ON WHATSAPP</a>
   </div>
 
   <div id="overlay"></div>
@@ -369,6 +374,29 @@
         closeNav();
       }
     });
+
+    function shareWebsite() {
+      const shareData = {
+        title: 'Visit SSSVM Class 10-F Website',
+        text: 'Check out our class website now!',
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        navigator.share(shareData)
+          .then(() => console.log('Shared successfully'))
+          .catch((err) => console.log('Share failed', err));
+      } else {
+        // Fallback for unsupported browsers
+        const dummy = document.createElement("input");
+        document.body.appendChild(dummy);
+        dummy.value = shareData.url;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        alert("🔗 Link copied! You can now paste it anywhere.");
+      }
+    }
   </script>
 </body>
   </html>
