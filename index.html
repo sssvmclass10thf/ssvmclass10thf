@@ -10,12 +10,12 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
-    /* --- Styles same as before --- */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       background-color: #fff1cc;
       color: #222;
+      overflow-x: hidden; /* Prevent horizontal scroll */
     }
 
     .header-container {
@@ -167,7 +167,6 @@
       font-size: 14px;
       color: #666;
       margin-bottom: 30px;
-      transition: transform 0.3s ease;
     }
 
     .main-box {
@@ -177,32 +176,27 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       padding: 30px 20px;
       margin: 15px;
-      transition: transform 0.3s ease;
     }
 
-    /* Side Navigation */
+    /* Sidebar styles */
     .side-nav {
-      height: 100%;
-      width: 0;
       position: fixed;
-      z-index: 1200;
       top: 0;
       left: 0;
+      height: 100vh;
+      width: 0; /* Hidden initially */
       background-color: #ffdb99;
-      overflow-x: hidden;
       overflow-y: auto;
-      transition: width 0.4s ease;
-      padding-top: 60px;
-      box-shadow: 3px 0 10px rgba(0,0,0,0.3);
-      border-right: 3px solid #000;
-
-      /* Rounded rectangle shape */
+      transition: width 0.3s ease;
+      z-index: 1200;
+      border-right: 3px solid black;
       border-radius: 0 20px 20px 0;
-      max-width: 260px;
+      box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+      padding-top: 60px;
     }
 
     .side-nav.open {
-      width: 260px;
+      width: 260px; /* Width when visible */
     }
 
     .side-nav a {
@@ -249,26 +243,18 @@
       background: #ffdb99;
       padding: 6px 12px;
       border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+      border: 3px solid black; /* Black border */
+      box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5); /* Glow */
       user-select: none;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
     }
 
     .menu-icon:hover {
       background: #ffd580;
+      box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.7);
     }
 
-    main, header, nav, footer {
-      transition: transform 0.3s ease;
-    }
-
-    main.slide-out, header.slide-out, nav.slide-out, footer.slide-out {
-      transform: translateX(20px);
-    }
-    main.slide-in, header.slide-in, nav.slide-in, footer.slide-in {
-      transform: translateX(0);
-    }
-
+    /* Overlay for sidebar */
     #overlay {
       display: none;
       position: fixed;
@@ -277,7 +263,13 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: transparent;
+      background: rgba(0,0,0,0.3);
+      transition: opacity 0.3s ease;
+    }
+
+    #overlay.active {
+      display: block;
+      opacity: 1;
     }
   </style>
 </head>
@@ -316,7 +308,7 @@
 
   <div class="notice-bar">
     <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
-      🔔 Important Notice: Important Notice: IT 402 book by Sumit Arora is uploaded ✨. Please check the Books section, and wait for some days for English's, Hindi's Help book and Physical Education's Book.
+      🔔 Important Notice: Term-1 Exams will begin from 15th July. Please check the Notice section for more info.
     </marquee>
   </div>
 
@@ -349,14 +341,14 @@
 
       <br />
 
-      <section id="School Official Website">
+      <section id="SchoolOfficialWebsite">
         <h2>🌐 OFFICIAL WEBSITE</h2>
         <a class="glow-button" href="https://deoriasvm.com/">📥 OFFICIAL WEBSITE</a>
       </section>
 
       <br />
 
-      <section id="TC Request">
+      <section id="TCRequest">
         <h2>🎓 TC REQUEST</h2>
         <a class="glow-button" href="https://deoriasvm.com/tc-request">📥 TC REQUEST</a>
       </section>
@@ -385,30 +377,12 @@
 
     function openNav() {
       sideNav.classList.add("open");
-      overlay.style.display = "block";
-
-      document.querySelector("main").classList.remove("slide-out");
-      document.querySelector("main").classList.add("slide-in");
-      document.querySelector("header").classList.remove("slide-out");
-      document.querySelector("header").classList.add("slide-in");
-      document.querySelector("nav").classList.remove("slide-out");
-      document.querySelector("nav").classList.add("slide-in");
-      document.querySelector("footer").classList.remove("slide-out");
-      document.querySelector("footer").classList.add("slide-in");
+      overlay.classList.add("active");
     }
 
     function closeNav() {
       sideNav.classList.remove("open");
-      overlay.style.display = "none";
-
-      document.querySelector("main").classList.remove("slide-in");
-      document.querySelector("main").classList.add("slide-out");
-      document.querySelector("header").classList.remove("slide-in");
-      document.querySelector("header").classList.add("slide-out");
-      document.querySelector("nav").classList.remove("slide-in");
-      document.querySelector("nav").classList.add("slide-out");
-      document.querySelector("footer").classList.remove("slide-in");
-      document.querySelector("footer").classList.add("slide-out");
+      overlay.classList.remove("active");
     }
 
     function toggleNav() {
@@ -420,17 +394,13 @@
     }
 
     menuToggle.addEventListener("click", toggleNav);
-
-    // Close sidebar if clicking outside sidebar (overlay)
     overlay.addEventListener("click", closeNav);
 
-    // Close sidebar on pressing Escape key
-    document.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", e => {
       if (e.key === "Escape" && sideNav.classList.contains("open")) {
         closeNav();
       }
     });
   </script>
-  </body>
-</html>
-  
+</body>
+  </html>
