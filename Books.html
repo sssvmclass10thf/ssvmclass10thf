@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Class 10 NCERT Books</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Class 10 Books - Sky Blue Theme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -16,16 +17,17 @@
 
     header {
       background: linear-gradient(90deg, #1976d2, #1565c0);
-      color: white;
+      color: #ffffff;
       padding: 50px 20px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(21,101,192,0.4);
+      box-shadow: 0 4px 16px rgba(21, 101, 192, 0.4);
     }
 
     header h1 {
       margin: 0;
       font-size: 36px;
       letter-spacing: 1px;
+      text-shadow: 1px 1px 4px rgba(13, 71, 161, 0.6);
     }
 
     .content {
@@ -35,7 +37,7 @@
     }
 
     .subject {
-      background-color: #bbdefb;
+      background-color: #42a5f5;
       border-radius: 18px;
       margin-bottom: 25px;
       box-shadow: 0 6px 15px rgba(25, 118, 210, 0.2);
@@ -45,23 +47,23 @@
 
     .subject:hover {
       transform: scale(1.02);
-      box-shadow: 0 8px 25px rgba(21, 101, 191, 0.4);
+      box-shadow: 0 8px 25px rgba(21, 101, 192, 0.3);
     }
 
     .subject-header {
       padding: 20px 25px;
       font-weight: 700;
       font-size: 20px;
-      background-color: #1e88e5;
+      background-color: #42a5f5;
       cursor: pointer;
       user-select: none;
       color: #ffffff;
-      border-bottom: 2px solid #1e88e5;
+      border-bottom: 2px solid #64b5f6;
       transition: background-color 0.3s ease;
     }
 
     .subject-header:hover {
-      background-color: #1565c0;
+      background-color: #42a5f5;
     }
 
     .chapter-list {
@@ -79,7 +81,7 @@
 
     .chapter-list h4 {
       margin-bottom: 8px;
-      color: #d84315;
+      color: #0d47a1;
     }
 
     .chapter-list ul {
@@ -111,11 +113,11 @@
     }
 
     .chapter-list a:hover {
-      color: #1565c0;
+      color: #42a5f5;
       text-decoration: underline;
     }
 
-    .back-button {
+    .back-home {
       display: block;
       margin: 50px auto 30px auto;
       padding: 12px 30px;
@@ -123,23 +125,23 @@
       font-weight: 600;
       text-align: center;
       text-decoration: none;
-      background-color: #17a2b8;
+      background-color: #1976d2;
       color: white;
       border-radius: 10px;
-      box-shadow: 0 0 14px #17a2b8, 0 0 28px #17a2b8;
+      box-shadow: 0 0 14px #42a5f5, 0 0 28px #1565c0;
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
       width: max-content;
     }
 
-    .back-button:hover {
-      background-color: #138496;
-      box-shadow: 0 0 20px #138496, 0 0 40px #117a8b;
+    .back-home:hover {
+      background-color: #0d47a1;
+      box-shadow: 0 0 20px #0d47a1, 0 0 40px #1565c0;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>📚 Class 10 NCERT Books (All Subjects)</h1>          
+   <h1>📚 Class 10 NCERT Books (All Subjects)</h1>          
   </header>    <div class="content">  <!-- Mathematics -->          
 <div class="subject">          
   <div class="subject-header">Mathematics</div>          
@@ -333,15 +335,15 @@
     </ul>
   </div>
 </div>
-  <a class="back-button" href="index.html">⬅ Back to Home</a>
+
+    <a href="index.html" class="back-home">⬅ Back to Home</a>
+  </div>
+
   <script>
-    const headers = document.querySelectorAll('.subject-header');
-    headers.forEach(header => {
-      header.addEventListener('click', () => {
-        const chapterList = header.nextElementSibling;
-        chapterList.classList.toggle('open');
-      });
-    });
+    function toggleList(header) {
+      const list = header.nextElementSibling;
+      list.classList.toggle("open");
+    }
   </script>
 </body>
 </html>
