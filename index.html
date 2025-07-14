@@ -17,7 +17,10 @@
       color: #222;
     }
 
-
+    /* Sidebar slide transition fix */
+    .side-nav {
+      transition: width 0.4s ease;
+    }
 
     @keyframes fadeInCenter {
       0% {
@@ -77,26 +80,13 @@
     }
 
     .nav-buttons {
-   list-style: none;
+      list-style: none;
       padding: 10px;
       margin: 20px auto 30px auto;
       display: flex;
       flex-wrap: wrap;
       gap: 12px 16px;
       justify-content: center;
-    }
-
-    .nav-buttons::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .nav-buttons::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    .nav-buttons::-webkit-scrollbar-thumb {
-      background-color: #888;
-      border-radius: 10px;
     }
 
     .nav-buttons li {
@@ -202,7 +192,6 @@
 
     .side-nav {
       height: 100vh;
-      max-height: 100vh;
       width: 0;
       position: fixed;
       z-index: 1200;
@@ -211,7 +200,6 @@
       background-color: #ffdb99;
       overflow-x: hidden;
       overflow-y: auto;
-      transition: 0.4s ease;
       padding-top: 60px;
       box-shadow: 3px 0 10px rgba(0,0,0,0.3);
       border-right: 3px solid #000;
@@ -274,18 +262,17 @@
   </style>
 </head>
 
-
-
+<body>
   <div id="sideNav" class="side-nav">
     <a href="#" onclick="closeNav()">🏠 HOME</a>
     <a href="https://drive.google.com/file/d/14p80M0_mtte4Xfa_rCgKruxyV8wbwS7c/preview" target="_blank">👨‍🎓 STUDENTS LIST</a>
     <a href="homework.html">📚 HOMEWORK</a>
     <a href="Notices.html">📢 NOTICE</a>
-    <a href="post.html">✍️ POSTS</a>
+    <a href="post.html">✍ POSTS</a>
     <a href="Books.html">📖 BOOKS</a>
     <a href="ncertsolution.html">💡 NCERT SOLUTIONS</a>
-    <a href="pyqs.html">⏳ PYQs<</a>
-    <a href="#contact" onclick="closeNav()">☎️ CONTACT US</a>
+    <a href="pyqs.html">⏳ PYQs</a>
+    <a href="#contact" onclick="closeNav()">☎ CONTACT US</a>
     <a href="#FeePayment" onclick="closeNav()">💸 FEE PAYMENT</a>
     <a href="#" onclick="shareWebsite()">📤 SHARE WEBSITE</a>
     <a href="https://wa.me/?text=Check%20out%20the%20SSSVM%20Class%2010-F%20website:%20https%3A%2F%2Fsssvmclass10thf.github.io/ssvmclass10thf/" target="_blank">💬 SHARE ON WHATSAPP</a>
@@ -297,7 +284,7 @@
   <header>
     <div class="header-container">
       <div class="school-info">
-        <h1>🕉️<br> Saraswati Senior Secondary Vidya Mandir</h1>
+        <h1>🕉<br> Saraswati Senior Secondary Vidya Mandir</h1>
         <h2>Class 10th - Section F</h2>
         <p><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>
         <strong>(Developer:</strong> <span style="font-family: 'Dancing Script', cursive; font-size: 17px; color: #333;">Priyanshu Singh</span>)
@@ -317,11 +304,11 @@
       <li><a href="https://drive.google.com/file/d/14p80M0_mtte4Xfa_rCgKruxyV8wbwS7c/preview" class="btn btn-homework"target="_blank">👨‍🎓 STUDENTS LIST</a></li>
       <li><a href="homework.html" class="btn btn-homework">📚 HOMEWORK</a></li>
       <li><a href="Notices.html" class="btn btn-notice">📢 NOTICE</a></li>
-      <li><a href="post.html" class="btn btn-posts">✍️ POSTS</a></li>
+      <li><a href="post.html" class="btn btn-posts">✍ POSTS</a></li>
       <li><a href="Books.html" class="btn btn-books">📖 BOOKS</a></li>
       <li><a href="ncertsolution.html" class="btn btn-posts">💡 NCERT SOLUTIONS</a></li>
       <li><a href="pyqs.html" class="btn btn-posts">⏳ PYQs</a></li>
-      <li><a href="#contact" class="btn btn-contact">☎️ CONTACT US</a></li>
+      <li><a href="#contact" class="btn btn-contact">☎ CONTACT US</a></li>
       <li><a href="#FeePayment" class="btn btn-fee">💸 FEE PAYMENT</a></li>
     </ul>
   </nav>
@@ -330,7 +317,7 @@
     <div class="main-box">
       <section id="StudentsList">
         <h2>📄 STUDENT LIST</h2>
-        <a class="glow-button" href="https://sssvmclass10thf.github.io/sssvmclass10thf/Fancy_Student_List.pdf" target="_blank">📥 View Student List PDF</a>
+        <a class="glow-button" href="https://sssvmclass10thf.github.io/ssvmclass10thf/Fancy_Student_List.pdf" target="_blank">📥 View Student List PDF</a>
       </section>
 
       <br />
@@ -425,19 +412,6 @@
         alert("🔗 Link copied! You can now paste it anywhere.");
       }
     }
-
-    // Auto-hide welcome banner
-    window.addEventListener('load', function () {
-      setTimeout(() => {
-        const banner = document.getElementById('welcomeBanner');
-        if (banner) {
-          banner.style.transition = "all 0.5s ease";
-          banner.style.opacity = "0";
-          banner.style.top = "-100px";
-          setTimeout(() => banner.remove(), 600);
-        }
-      }, 4000);
-    });
   </script>
 </body>
 </html>
