@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,22 +13,13 @@
       background-color: #fff1cc;
       color: #222;
     }
- /* Sidebar slide transition fix */
     .side-nav {
       transition: width 0.4s ease;
     }
-
     @keyframes fadeInCenter {
-      0% {
-        opacity: 0;
-        transform: translate(-50%, -60%);
-      }
-      100% {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-      }
+      0% { opacity: 0; transform: translate(-50%, -60%); }
+      100% { opacity: 1; transform: translate(-50%, -50%); }
     }
-
     .header-container {
       background-color: #FFA64D;
       background-image: url('https://drive.google.com/uc?export=view&id=17C1FKTJVrySCL1So9OEoT24-Jvl1RWkS');
@@ -41,7 +33,6 @@
       box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
       margin: 15px;
     }
-
     .school-info h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
@@ -50,14 +41,12 @@
       margin: 8px 0 12px 0;
       text-transform: uppercase;
     }
-
     .school-info h2, .school-info p {
       color: #041029;
       font-weight: 600;
       margin: 5px 0;
       font-size: 0.95rem;
     }
-
     .notice-bar {
       background-color: #ffcccb;
       color: #111;
@@ -68,22 +57,34 @@
       border-bottom: 2px solid #d9534f;
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
     }
+
     nav {
       margin: 30px auto;
-      max-width: 900px;
+     
+     padding: 0 15px;
+      max-width: 100%;
       text-align: center;
+    }
+
+    .button-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+      box-sizing: border-box;
     }
 
     .button-row {
       display: flex;
       justify-content: center;
       gap: 14px;
-      flex-wrap: nowrap; /* no wrapping inside each row */
+      flex-wrap: nowrap;
       margin-bottom: 14px;
+      
+      
     }
 
     .btn {
-      min-width: 140px;
+      min-width: 120px;
       padding: 10px 18px;
       border-radius: 8px;
       font-weight: 600;
@@ -92,13 +93,12 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       font-size: 14px;
       color: #222;
-      background-color: #a0c4ff; /* default color, can override */
+      background-color: #a0c4ff;
       text-align: center;
       display: inline-block;
       user-select: none;
     }
 
-    /* Different colors for different button types */
     .btn-home { background: #a0c4ff; }
     .btn-posts { background: #cdb4db; }
     .btn-pyqs { background: #ffd6a5; }
@@ -116,7 +116,7 @@
       box-shadow: 0 0 12px rgba(0,0,0,0.3);
       cursor: pointer;
     }
-    .glow-button {
+  .glow-button {
       padding: 12px 24px;
       font-size: 16px;
       font-weight: 600;
@@ -164,9 +164,6 @@
       border-radius: 12px;
       background-color: #fffdf3;
     }
-
-    #contact h2 { text-align: center; margin-bottom: 15px; }
-    #contact p { font-size: 16px; margin: 8px 0; }
 
     footer {
       text-align: center;
@@ -259,7 +256,7 @@
 </head>
 
 <body>
-<div id="sideNav" class="side-nav">
+  <div id="sideNav" class="side-nav">
     <a href="#" onclick="closeNav()">🏠 HOME</a>
     <a href="https://drive.google.com/file/d/14p80M0_mtte4Xfa_rCgKruxyV8wbwS7c/preview" target="_blank">👨‍🎓 STUDENTS LIST</a>
     <a href="homework.html">📚 HOMEWORK</a>
@@ -291,46 +288,39 @@
 
   <div class="notice-bar">
     <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
-      🔔 Important Notice: PYQs section and NCERT SOLUTION section is added!!!! and please wait for hindi helpbook .....<br>         DOWNLOAD the APP.
+      🔔 Important Notice: PYQs section and NCERT SOLUTION section is added!!!! and please wait for hindi helpbook .....<br> DOWNLOAD the APP.
     </marquee>
   </div>
+
   <nav>
-    <!-- Row 1 -->
-    <div class="button-row">
-      <a href="#" class="btn btn-home">🏠 HOME</a>
-      <a href="post.html" class="btn btn-posts">✍ POSTS</a>
-    </div>
-
-    <!-- Row 2 -->
-    <div class="button-row">
-      <a href="Notices.html" class="btn btn-notice">📢 NOTICE</a>
-      <a href="homework.html" class="btn btn-homework">📚 HOMEWORK</a>
-    </div>
-
-    <!-- Row 3 -->
-    <div class="button-row">
-      <a href="Books.html" class="btn btn-books">📖 BOOKS</a>
-      <a href="ncertsolution.html" class="btn btn-ncert">💡 NCERT SOLUTIONS</a>
-    </div>
-
-    <!-- Row 4 -->
-    <div class="button-row">
-      <a href="#FeePayment" class="btn btn-fee">💸 FEE PAYMENT</a>
-      <a href="#contact" class="btn btn-contact">☎ CONTACT US</a>
-    </div>
-
-    <!-- Row 5 -->
-    <div class="button-row">
-      <a href="https://drive.google.com/uc?export=download&id=19D8q4WFR5zji72fp4tuN6jgAaSBIlPgU" class="btn btn-download">📱 DOWNLOAD APP</a>
-      <a href="https://drive.google.com/file/d/14p80M0_mtte4Xfa_rCgKruxyV8wbwS7c/preview" target="_blank" class="btn btn-students">👨‍🎓 STUDENT LIST</a>
-    </div>
-
-    <!-- Last row: only PYQs centered -->
-    <div class="button-row" style="justify-content: center;">
-      <a href="pyqs.html" class="btn btn-pyqs">⏳ PYQs</a>
+    <div class="button-wrapper">
+      <div class="button-row">
+        <a href="#" class="btn btn-home">🏠 HOME</a>
+        <a href="post.html" class="btn btn-posts">✍ POSTS</a>
+      </div>
+      <div class="button-row">
+        <a href="Notices.html" class="btn btn-notice">📢 NOTICE</a>
+        <a href="homework.html" class="btn btn-homework">📚 HOMEWORK</a>
+      </div>
+      <div class="button-row">
+        <a href="Books.html" class="btn btn-books">📖 BOOKS</a>
+        <a href="ncertsolution.html" class="btn btn-ncert">💡 NCERT SOLUTIONS</a>
+      </div>
+      <div class="button-row">
+        <a href="#FeePayment" class="btn btn-fee">💸 FEE PAYMENT</a>
+        <a href="#contact" class="btn btn-contact">☎ CONTACT US</a>
+      </div>
+      <div class="button-row">
+        <a href="https://drive.google.com/uc?export=download&id=19D8q4WFR5zji72fp4tuN6jgAaSBIlPgU" class="btn btn-download">📱 DOWNLOAD APP</a>
+        <a href="https://drive.google.com/file/d/14p80M0_mtte4Xfa_rCgKruxyV8wbwS7c/preview" target="_blank" class="btn btn-students">👨‍🎓 STUDENT LIST</a>
+      </div>
+      <div class="button-row" style="justify-content: center;">
+        <a href="pyqs.html" class="btn btn-pyqs">⏳ PYQs</a>
+      </div>
     </div>
   </nav>
- <main>
+
+  <main>
     <div class="main-box">
       <section id="StudentsList">
         <h2>📄 STUDENT LIST</h2>
@@ -369,11 +359,11 @@
       <p><strong>📧 Developer's Email:</strong> <a href="mailto:priyanshusingh0606@gmail.com">priyanshusingh0606@gmail.com</a></p>
     </section>
 
-    <!-- 📱 Download App Button -->
     <a href="https://drive.google.com/uc?export=download&id=19D8q4WFR5zji72fp4tuN6jgAaSBIlPgU" class="scroll-top" download style="display: block; text-align: center; width: fit-content; margin: 0 auto;">
       📱 Download Class App <br>
       (click on Download anyway)
     </a>
+
     <br>
     <footer>
       <a href="#top" class="scroll-top">🚀 Fly to Top</a>
@@ -399,11 +389,7 @@
     }
 
     function toggleNav() {
-      if (sideNav.classList.contains("open")) {
-        closeNav();
-      } else {
-        openNav();
-      }
+      sideNav.classList.contains("open") ? closeNav() : openNav();
     }
 
     menuToggle.addEventListener("click", toggleNav);
@@ -438,3 +424,5 @@
   </script>
 </body>
 </html>
+
+  
