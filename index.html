@@ -1,14 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SSSVM Class 10-F</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700;900&family=Dancing+Script&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
     body {
@@ -17,8 +12,7 @@
       background-color: #fff1cc;
       color: #222;
     }
-
-    /* Sidebar slide transition fix */
+ /* Sidebar slide transition fix */
     .side-nav {
       transition: width 0.4s ease;
     }
@@ -74,54 +68,54 @@
       border-bottom: 2px solid #d9534f;
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
     }
-
     nav {
-      margin-top: 20px;
+      margin: 30px auto;
+      max-width: 900px;
       text-align: center;
     }
 
-    .nav-buttons {
-  list-style: none;
-  padding: 0;
-  margin: 30px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  max-width: 700px;
-}
-
-    .nav-buttons li {
-      display: inline-block;
-      flex: 0 0 auto;
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: nowrap; /* no wrapping inside each row */
+      margin-bottom: 14px;
     }
 
-    .nav-buttons .btn {
-      margin: 6px;
-      display: inline-block;
+    .btn {
+      min-width: 140px;
       padding: 10px 18px;
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
-      transition: 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       font-size: 14px;
+      color: #222;
+      background-color: #a0c4ff; /* default color, can override */
+      text-align: center;
+      display: inline-block;
+      user-select: none;
     }
 
+    /* Different colors for different button types */
     .btn-home { background: #a0c4ff; }
-    .btn-students { background: #caffbf; }
-    .btn-homework { background: #ffd6a5; }
-    .btn-notice { background: #ffadad; }
     .btn-posts { background: #cdb4db; }
-    .btn-contact { background: #b5ead7; }
-    .btn-fee { background: #ffffb5; }
+    .btn-pyqs { background: #ffd6a5; }
+    .btn-notice { background: #ffadad; }
+    .btn-homework { background: #ffd6a5; }
     .btn-books { background: #d0f4de; }
+    .btn-ncert { background: #caffbf; }
+    .btn-fee { background: #ffffb5; }
+    .btn-contact { background: #b5ead7; }
+    .btn-download { background: #ffb347; }
+    .btn-students { background: #ffdfba; }
 
     .btn:hover {
       transform: scale(1.05);
       box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      cursor: pointer;
     }
-
     .glow-button {
       padding: 12px 24px;
       font-size: 16px;
@@ -261,11 +255,18 @@
       height: 100vh;
       background: transparent;
     }
+    .button-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  margin: 30px auto;
+}
   </style>
 </head>
 
 <body>
-  <div id="sideNav" class="side-nav">
+<div id="sideNav" class="side-nav">
     <a href="#" onclick="closeNav()">🏠 HOME</a>
     <a href="https://drive.google.com/file/d/14p80M0_mtte4Xfa_rCgKruxyV8wbwS7c/preview" target="_blank">👨‍🎓 STUDENTS LIST</a>
     <a href="homework.html">📚 HOMEWORK</a>
@@ -287,7 +288,7 @@
   <header>
     <div class="header-container">
       <div class="school-info">
-        <h1>🕉<br> Saraswati Senior Secondary Vidya Mandir</h1>
+        <h1>🕉️<br> Saraswati Senior Secondary Vidya Mandir</h1>
         <h2>Class 10th - Section F</h2>
         <p><strong>Class Teacher:</strong> Mr. ASHOK YADAV JI</p>
         <strong>(Developer:</strong> <span style="font-family: 'Dancing Script', cursive; font-size: 17px; color: #333;">Priyanshu Singh</span>)
@@ -300,31 +301,39 @@
       🔔 Important Notice: PYQs section and NCERT SOLUTION section is added!!!! and please wait for hindi helpbook .....<br>         DOWNLOAD the APP.
     </marquee>
   </div>
-
   <nav>
-    <ul class="nav-buttons">
-      <li><a href="#" class="btn btn-home">🏠 HOME</a></li>
-      <li><a href="post.html" class="btn btn-posts">✍ POSTS</a></li>
-      <li><a href="pyqs.html" class="btn btn-posts">⏳ PYQs</a></li>
-      <li><a href="Notices.html" class="btn btn-notice">📢 NOTICE</a></li>
-      <li><a href="homework.html" class="btn btn-homework">📚 HOMEWORK</a></li>
-      <li><a href="Books.html" class="btn btn-books">📖 BOOKS</a></li>
-       <li><a href="ncertsolution.html" class="btn btn-posts">💡 NCERT SOLUTIONS</a></li>
-      
-      <li><a href="#FeePayment" class="btn btn-fee">💸 FEE PAYMENT</a></li>
-      <li><a href="#contact" class="btn btn-contact">☎ CONTACT US</a></li>
-      
-      
-     
-      <li><a href="https://drive.google.com/file/d/14p80M0_mtte4Xfa_rCgKruxyV8wbwS7c/preview" class="btn btn-homework"target="_blank">👨‍🎓 STUDENTS LIST</a></li>
-      <li><a href="https://drive.google.com/uc?export=download&id=19D8q4WFR5zji72fp4tuN6jgAaSBIlPgU" class="btn btn-contact">📱 DOWNLOAD APP</a></li>
-      
-      
-      
-    </ul>
-  </nav>
+    <!-- Row 1 -->
+    <div class="button-row">
+      <a href="#" class="btn btn-home">🏠 HOME</a>
+      <a href="post.html" class="btn btn-posts">✍ POSTS</a>
+      <a href="pyqs.html" class="btn btn-pyqs">⏳ PYQs</a>
+    </div>
 
-  <main>
+    <!-- Row 2 -->
+    <div class="button-row">
+      <a href="Notices.html" class="btn btn-notice">📢 NOTICE</a>
+      <a href="homework.html" class="btn btn-homework">📚 HOMEWORK</a>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="button-row">
+      <a href="Books.html" class="btn btn-books">📖 BOOKS</a>
+      <a href="ncertsolution.html" class="btn btn-ncert">💡 NCERT SOLUTIONS</a>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="button-row">
+      <a href="#FeePayment" class="btn btn-fee">💸 FEE PAYMENT</a>
+      <a href="#contact" class="btn btn-contact">☎ CONTACT US</a>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="button-row">
+      <a href="https://drive.google.com/uc?export=download&id=19D8q4WFR5zji72fp4tuN6jgAaSBIlPgU" class="btn btn-download">📱 DOWNLOAD APP</a>
+      <a href="https://drive.google.com/file/d/14p80M0_mtte4Xfa_rCgKruxyV8wbwS7c/preview" target="_blank" class="btn btn-students">👨‍🎓 STUDENT LIST</a>
+    </div>
+  </nav>
+ <main>
     <div class="main-box">
       <section id="StudentsList">
         <h2>📄 STUDENT LIST</h2>
@@ -432,3 +441,4 @@
   </script>
 </body>
 </html>
+
