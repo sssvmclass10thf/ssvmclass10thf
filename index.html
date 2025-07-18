@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -251,7 +250,26 @@
       width: 100vw;
       height: 100vh;
       background: transparent;
-    }
+    }.glow-button {
+  display: inline-block;
+  max-width: 100%;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+  transition: 0.3s ease-in-out;
+  margin-top: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: normal;     /* ✅ allow line breaks */
+  word-wrap: break-word;   /* ✅ break long words if needed */
+  overflow-wrap: break-word;
+}
   </style>
 </head>
 
@@ -352,8 +370,7 @@
     </div>
 
     <br /><br />
-
-    <section id="contact">
+<section id="contact">
   <h2>📞 CONTACT US</h2>
 
   <p><strong>🏫 School Address:</strong> Saraswati Senior Secondary Vidya Mandir, Deoria Khas, Deoria (U.P.)</p>
@@ -383,12 +400,25 @@
       <br>VIVEK SINGH (WhatsApp) +91 7408498558
     </a>
   </p>
-     <p> <a class="glow-button" href="#"> (to use "CONTACT US" function you must go to the website) <br> website link :- https://sssvmclass10thf.github.io/ssvmclass10thf/ </a> </p>
+
+  <!-- ✅ Responsive Button Wrapper -->
+  <div style="max-width: 100%; padding: 0 10px; text-align: center;">
+    <a class="glow-button" href="#">
+      (to use "CONTACT US" function you must go to the website) <br>
+      website link :- "https://sssvmclass10thf.github.io/ssvmclass10thf/"<br> OR <br> "DOWNLOAD 2nd APP"
+    </a>
+  </div>
 </section>
 
 
     <a href="https://drive.google.com/uc?export=download&id=19D8q4WFR5zji72fp4tuN6jgAaSBIlPgU" class="scroll-top" download style="display: block; text-align: center; width: fit-content; margin: 0 auto;">
       📱 Download Class App <br>
+      (click on Download anyway)
+    </a>
+    <br>
+    
+    <a href="https://drive.google.com/uc?export=download&id=19pe0e4MkhzYQFbilfNSjdTo-tp8irKrk" class="scroll-top" download style="display: block; text-align: center; width: fit-content; margin: 0 auto;">
+      📱 2nd App {Extra Features Included} <br>
       (click on Download anyway)
     </a>
 
