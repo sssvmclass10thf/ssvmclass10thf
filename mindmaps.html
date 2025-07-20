@@ -6,11 +6,21 @@
   <title>Mindmaps | All Subjects</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
+    }
+
+    body {
       font-family: 'Poppins', sans-serif;
       background-color: #fefae0;
       color: #333;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header, footer {
@@ -19,7 +29,6 @@
       color: white;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      flex: 1;
     }
 
     header h1 {
@@ -27,18 +36,16 @@
       font-size: 36px;
     }
 
-    .container {
-      flex: 1;
+    .mindmap-container {
+      flex: 1; /* Important for sticky footer */
       max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
     }
-
-   .toggle-btn {
-  width: 80%;
-  max-width: 400px; /* Optional: to prevent full screen stretch */
+.toggle-btn {
+  width: 100%;
   display: block;
-  margin: 20px auto; /* ✅ This will center it horizontally */
+  margin: 20px 0;
   background: linear-gradient(135deg, #457b9d, #a8dadc);
   color: white;
   border: none;
@@ -50,8 +57,17 @@
   box-shadow: 0 0 12px rgba(69, 123, 157, 0.6);
   transition: 0.3s ease-in-out;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
-}
+  box-sizing: border-box;
 
+
+}
+  .mindmap-container {
+  flex: 1;
+  width: 80%;
+  max-width: 100%; /* or remove max-width */
+  margin: auto;
+  padding: 40px 20px;
+}
     }
 
     .toggle-btn:hover {
@@ -123,13 +139,13 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>MINDMAPS</h1>
-  </header>
+  <div class="wrapper">
+    <header>
+      <h1>MINDMAPS</h1>
+    </header>
 
- <div class="mindmap-container">
-
-    <!-- SST -->
+    <div class="mindmap-container">
+      <!-- SST -->
     <button class="toggle-btn" onclick="toggleContent('sst')">SST</button>
     <div class="subject-content" id="sst">
       <div class="category-block">
@@ -236,11 +252,14 @@
 </ul>
       </div>
     </div>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2025 SSSVM <br><span style="font-size: 0.8em;">~Priyanshu Singh</span></p>
+      <a href="index.html" class="back-home-btn">⬅ Back to Home</a>
+    </footer>
   </div>
-  <footer>
-    <p>&copy; 2025 SSSVM <br><span style="font-size: 0.8em;">~Priyanshu Singh</span></p>
-    <a href="index.html" class="back-home-btn">⬅ Back to Home</a>
-  </footer>
 
   <script>
     function toggleContent(id) {
